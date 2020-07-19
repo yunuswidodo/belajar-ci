@@ -35,4 +35,12 @@ class Crud extends CI_Controller
         $this->m_data->input_data($data, 'user');
         redirect('crud/index');
     }
+
+
+    function hapus($id)
+    {
+        $where = array('id' => $id);
+        $this->m_data->hapus_data($where, 'user');
+        redirect('crud/index');
+    }
 }

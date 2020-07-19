@@ -30,11 +30,8 @@
                 <td></td>
                 <td><input type="submit" value="tambah"></td>
             </tr>
-
         </table>
-
     </form>
-
 </body>
 
 </html>
