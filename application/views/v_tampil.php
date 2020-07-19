@@ -9,7 +9,7 @@
 
 <body>
     <center>bissmilah</center>
-    <center><?php echo anchor('crud/tambah', 'Tambah Data'); ?></center>
+    <?php echo anchor('crud/tambah', 'Tambah Data'); ?>
 
     <table style="margin:20px auto;" border="1">
         <tr>
@@ -24,10 +24,10 @@
             <tr>
                 <td><?php echo $u->nama ?></td>
                 <td><?php echo $u->alamat ?></td>
-                <td>
                 <td><?php echo $u->pekerjaan ?></td>
-                <?php echo anchor('crud/edit/' . $u->id, 'Edit') ?>
-                <?php echo anchor('crud/hapus/' . $u->id, 'Hapus') ?>
+                <td>
+                    <?php echo anchor('crud/edit/' . $u->id, 'Edit') ?>
+                    <?php echo anchor('crud/hapus/' . $u->id, 'Hapus') ?>
                 </td>
             </tr>
         <?php
