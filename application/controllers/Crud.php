@@ -12,7 +12,7 @@ class Crud extends CI_Controller
     function index()
     {
         $data['user'] = $this->m_data->tampil_data()->result();
-        //print_r($data['user']);
+        //print_r($data['user']); // user = $user  yang diambil diview
         $this->load->view('v_tampil', $data);
     }
 
@@ -42,5 +42,12 @@ class Crud extends CI_Controller
         $where = array('id' => $id);
         $this->m_data->hapus_data($where, 'user');
         redirect('crud/index');
+    }
+
+    function edit($id)
+    {
+        $where = array('id' => $id);
+        $data['user'] = $this->m_data->edit_data($where, 'user')->result();
+        $this->load->view('v_edit', $data,);
     }
 }
